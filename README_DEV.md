@@ -8,10 +8,11 @@ Recommended version of Tableau Desktop is 2019.4 (2019.2.2, 2019.2.3, as well as
 Table of contents
 -----------------
 
-    + [Install required drivers](#install-drivers)
-    + [Obtain Connector/install](#obtain-connector-install)
-    + [Launch Tableau with new flags](#launch-tableau-with-new-flags)
-    + [Notes](#notes)
+  * [Usage](#usage)
+  * [Install required drivers](#install-drivers)
+  * [Obtain Connector/install](#obtain-connector-install)
+  * [Launch Tableau with new flags](#launch-tableau-with-new-flags)
+  * [Notes](#notes)
 
 ### Install Drivers
 
