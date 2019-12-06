@@ -91,3 +91,9 @@ Create database with mixed case object name support:
     createdb mixedcase
     # optionally restore:
     iisetres ii.`iipmhost`.createdb.delim_id_case lower
+
+### Debugging errors
+
+Error dialogs from Tab often don't have much content. More detailed logs go to the "Logs" directory and is created on each start up. E.g. under Windows `"%USERPROFILE%\Documents\My Tableau Repository\Logs"`.
+
+Delete or rename the existing logs directory, re-start/run and then look in the logs directory. Specifically look for `log.txt` which is a json file and can be read with https://github.com/tableau/tableau-log-viewer/
