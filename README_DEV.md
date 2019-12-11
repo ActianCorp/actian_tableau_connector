@@ -26,12 +26,12 @@ See:
 
 Obtain Connectors source code, for example:
 
-    git clone https://github.com/clach04/actian_tableau_connector.git
+    git clone https://github.com/ActianCorp/actian_tableau_connector.git
 
 Determine full path, for example, assuming Microsoft Windows.
 
     cd /d c:\
-    git clone https://github.com/clach04/actian_tableau_connector.git
+    git clone https://github.com/ActianCorp/actian_tableau_connector.git
 
 Full path is:
 

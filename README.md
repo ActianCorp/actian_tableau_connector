@@ -2,7 +2,7 @@
 
 Tableau connector (aka taco) for Actian Avalanche, Vector, and Ingres.
 
-Latest version available at [GitHub](https://github.com/clach04/actian_tableau_connector).
+Latest version available at [GitHub](https://github.com/ActianCorp/actian_tableau_connector).
 
 Minimum recommend version of Tableau is 2019.4 (for earlier versions see development notes see [README_DEV.md](README_DEV.md)).
 
@@ -14,7 +14,7 @@ See:
 
 ## Installation Instructions
 
-Copy taco from files https://github.com/clach04/actian_tableau_connector/releases/tag/unsigned_initial into:
+Copy taco from files https://github.com/ActianCorp/actian_tableau_connector/releases/tag/unsigned_initial into:
 
   * For Microsoft Windows `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
  
