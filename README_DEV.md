@@ -53,6 +53,7 @@ There are three main options for launching plugins.
 
 Examples to Launch Tableau via command line (or create/update shortcut) to:
 
+    "C:\Program Files\Tableau\Tableau 2019.4\bin\tableau.exe" -DConnectPluginsPath=%CD%
     "C:\Program Files\Tableau\Tableau 2019.4\bin\tableau.exe" -DDisableVerifyConnectorPluginSignature=true
     "C:\Program Files\Tableau\Tableau 2019.2\bin\tableau.exe" -DConnectPluginsPath=C:\actian_tableau_connector\
 
