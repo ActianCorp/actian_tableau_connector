@@ -18,7 +18,7 @@ Copy taco from files https://github.com/clach04/actian_tableau_connector/release
 
   * For Microsoft Windows `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
  
-**NOTE** for unsigned early access versions need to launch Tableau with unsigned flag:
+**NOTE** due to Tableau bug https://github.com/tableau/connector-plugin-sdk/issues/401 need to launch Tableau with unsigned flag:
 
     "C:\Program Files\Tableau\Tableau 2019.4\bin\tableau.exe" -DDisableVerifyConnectorPluginSignature=true
 
