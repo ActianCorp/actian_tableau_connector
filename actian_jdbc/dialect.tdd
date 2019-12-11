@@ -483,7 +483,7 @@
 		<argument type='str' />
     </function>
     <date-function name='DATEDIFF' return-type='int'>
-		<formula>TIMESTAMPDIFF(SECOND,CAST(%2 AS TIMESTAMP(4)),%3)/86400/7</formula>
+		<formula>CAST(ROUND(TIMESTAMPDIFF(DAY,%2,%3)/decimal(7, 3, 2),0) AS INTEGER)</formula>
         <formula part='year'>(yEaR(%3) - YEAR(%2))</formula>
 		<formula part='quarter'>ROUND(int(MONTHS_BETWEEN(DATE_TRUNC(&apos;QUARTER&apos;,%3),date_trunc(&apos;QUARTER&apos;,%2))/3),0)</formula>
         <formula part='month'>TIMESTAMPDIFF(MONTH,%2, %3)</formula>
@@ -522,7 +522,7 @@
 		<formula part='dayofyear'>TIMESTAMPDIFF(DAY,%2, CAST(%3 AS ANSIDATE))</formula>
         <formula part='day'>TIMESTAMPDIFF(DAY,%2, CAST(%3 AS ANSIDATE))</formula>
 		<formula part='weekday'>TIMESTAMPDIFF(DAY,%2, CAST(%3 AS ANSIDATE))</formula>
-		<formula  part='week'>ROUND(TIMESTAMPDIFF(DAY,%2, %3/7.0000,0)</formula>
+		<formula  part='week'>ROUND(TIMESTAMPDIFF(DAY,%2, CAST(%3 AS ANSIDATE)/decimal(7, 5, 4),0)</formula>
         <formula part='hour'>TIMESTAMPDIFF(HOUR,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='minute'>TIMESTAMPDIFF(MINUTE,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='second'>TIMESTAMPDIFF(SECOND,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
@@ -555,7 +555,7 @@
 		<formula part='dayofyear'>TIMESTAMPDIFF(DAY,CAST(%2 AS TIMESTAMP(2)), %3)</formula>
         <formula part='day'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)</formula>
 		<formula part='weekday'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)</formula>
-		<formula  part='week'>ROUND(TIMESTAMPDIFF(DAY,CAST(%2), %3)/7.000000,0)</formula>
+		<formula  part='week'>ROUND(TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)/decimal(7, 7, 6), 0)</formula>
         <formula part='hour'>TIMESTAMPDIFF(HOUR,%2, CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='minute'>TIMESTAMPDIFF(MINUTE,%2, CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='second'>TIMESTAMPDIFF(SECOND,%2, CAST(%3 AS TIMESTAMP))</formula>
