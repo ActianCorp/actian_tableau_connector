@@ -834,7 +834,7 @@
         <part name='dayofyear' value='FMDDD' />
         <part name='day' value='FMDD' />
         <part name='weekday' value='FMDay' />
-        <part name='week' value='WW' />
+        <part name='week' value='IW' />
         <part name='hour' value='HH24' />
         <part name='minute' value='FMMI' />
         <part name='second' value='FMSS' />
