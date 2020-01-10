@@ -15,6 +15,12 @@
         params["PWD"] = attr["password"];
     }
     params["DATABASE"] = attr["dbname"];
+    var slash_index = params["DATABASE"].search('/');
+    if (slash_index >= 0)
+    {
+        params["ServerType"] = params["DATABASE"].slice(slash_index + 1);  // determine server class (skip slash)
+        params["DATABASE"] = params["DATABASE"].slice(0, slash_index);  // strip class, leaving only database name
+    }
 
     var formattedParams = [];
 
