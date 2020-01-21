@@ -552,7 +552,7 @@
         <formula part='quarter'>rOUND(INT(MONTHS_BETWEEN(DATE_TRUNC(&apos;QUARTER&apos;,%3),date_trunc(&apos;QUARTER&apos;,%2))/3),0)</formula>
         <formula part='month'>TIMESTAMPDIFF(MONTH,CAST(%2 AS ANSIDATE), %3)</formula>
 		<formula part='dayofyear'>TIMESTAMPDIFF(DAY,CAST(%2 AS TIMESTAMP(2)), %3)</formula>
-        <formula part='day'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE),%3)</formula>
+        <formula part='day'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)</formula>
 		<formula part='weekday'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)</formula>
 		<formula  part='week'>ROUND(TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)/decimal(7, 7, 6), 0)</formula>
         <formula part='hour'>TIMESTAMPDIFF(HOUR,%2, CAST(%3 AS TIMESTAMP))</formula>
