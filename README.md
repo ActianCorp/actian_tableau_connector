@@ -13,7 +13,7 @@ Ensure using minimum version of Tableau Desktop 2019.4.2, 20194.20.0119.2058
 available from https://www.tableau.com/support/releases/desktop/2019.4.2 is installed.
 
 
-Download taco from files https://github.com/ActianCorp/actian_tableau_connector/releases/ and copy into:
+Download taco from files https://github.com/ActianCorp/actian_tableau_connector/releases/latest and copy into:
 
   * For Microsoft Windows `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
 
