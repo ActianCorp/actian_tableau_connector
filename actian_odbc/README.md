@@ -1,14 +1,14 @@
 Actian ODBC Connector for Tableau
 =================================
 
-Latest version available at [GitHub](https://github.com/clach04/actian_tableau_connector).
+Latest version available at [GitHub](https://github.com/ActianCorp/actian_tableau_connector).
 
 Table of contents
 -----------------
 
   * [Usage](#usage)
     + [Install ODBC driver](#install-odbc-driver)
-    + [Obtain Connector/install](#obtain-connector-install)
+    + [Obtain Connector](#obtain-connector)
     + [Launch Tableau with new flags](#launch-tableau-with-new-flags)
     + [Notes](#notes)
 
@@ -21,3 +21,19 @@ Usage
 Install ODBC Driver from [ESD](https://esd.actian.com/product/Avalanche/Client_Runtime)
 
 NOTE Tableau Desktop is a 64-bit product, it requires a 64-Bit ODBC Driver client installation.
+
+
+### Obtain Connector
+
+Download taco from files https://github.com/ActianCorp/actian_tableau_connector/releases/ and copy into:
+
+  * For Microsoft Windows `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
+
+
+### Launch Tableau
+
+Launch Tableau:
+ * Choose "Connect To a Server"
+ * Click "More..."
+ * Select "Actian ODBC by Actian"
+ * Fill in "Server" and other fields, using information from your DBA

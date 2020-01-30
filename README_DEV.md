@@ -3,7 +3,9 @@
 
 This is a Connector for Tableau created with the [connector-plugin-sdk](https://github.com/tableau/connector-plugin-sdk).
 
-Recommended version of Tableau Desktop is 2019.4 (2019.2.2, 2019.2.3, as well as 2019.2 known to also work).
+Recommended version of Tableau Desktop is 2019.4.2 (20194.20.0119.2058).
+
+When running from source code (i.e. rather than from a built taco) 2019.2.2, 2019.2.3, as well as 2019.2 are known to also work.
 
 Table of contents
 -----------------

@@ -1,15 +1,15 @@
 Actian JDBC Connector for Tableau
 =================================
 
-Latest version available at [GitHub](https://github.com/clach04/actian_tableau_connector).
+Latest version available at [GitHub](https://github.com/ActianCorp/actian_tableau_connector).
 
 Table of contents
 -----------------
 
   * [Usage](#usage)
     + [Install JDBC driver jar file](#install-jdbc-driver-jar-file)
-    + [Obtain Connector/install](#obtain-connector-install)
-    + [Launch Tableau with new flags](#launch-tableau-with-new-flags)
+    + [Obtain Connector](#obtain-connector)
+    + [Launch Tableau](#launch-tableau)
 
 
 Usage
@@ -26,3 +26,19 @@ or obtained from a client installation from:
 
   * `%II_SYSTEM%\ingres\lib\iijdbc.jar` - Windows
   * `$II_SYSTEM/ingres/lib/iijdbc.jar` - Linux/Unix
+
+
+### Obtain Connector
+
+Download taco from files https://github.com/ActianCorp/actian_tableau_connector/releases/ and copy into:
+
+  * For Microsoft Windows `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
+
+
+### Launch Tableau
+
+Launch Tableau:
+ * Choose "Connect To a Server"
+ * Click "More..."
+ * Select "Actian JDBC by Actian"
+ * Fill in "Server" and other fields, using information from your DBA
