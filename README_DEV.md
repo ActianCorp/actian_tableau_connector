@@ -41,6 +41,8 @@ Full path is:
 
 ### Launch Tableau with new flags
 
+**NOTE** when running from source code the `taco` files need to be removed, those take precedence in Tableau.
+
 #### MacOS Tableau Desktop
 
 See https://tableau.github.io/connector-plugin-sdk/docs/share
@@ -60,6 +62,8 @@ Examples to Launch Tableau via command line (or create/update shortcut) to:
     "C:\Program Files\Tableau\Tableau 2019.2\bin\tableau.exe" -DConnectPluginsPath=C:\actian_tableau_connector\
 
 Where `C:\Program Files\Tableau\Tableau 2019.2`, etc. is the location where Tableau was installed.
+
+**NOTE** when running from source code the `taco` files need to be removed, those take precedence in Tableau.
 
 #### Tableau Server
 
