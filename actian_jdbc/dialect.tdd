@@ -34,7 +34,7 @@
       <argument type='real' />
     </function>
     <function group='numeric' name='SIGN' return-type='int'>
-      <formula>(CASE WHEN %1 &lt; 0 THEN -1 WHEN %1 &gt; 0 THEN 1 ELSE IF(%1 IS NOT NULL,0, NULL) END)</formula>
+      <formula>SIGN(%1)</formula>
       <argument type='real' />
     </function>
     <function group='numeric' name='LOG' return-type='real'>
