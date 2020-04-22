@@ -8,10 +8,6 @@
       <formula>VARCHAR(&apos;18.1-80.00&apos;</formula>
       <argument type='localstr' />
     </function>
-	<function group='numeric' name='ABS' return-type='real'>
-      <formula>ABS(%1)</formula>
-      <argument type='real' />
-    </function>
 	<function group='numeric' name='SQUARE' return-type='real'>
       <formula>(%1 * %1)</formula>
       <argument type='real' />
@@ -31,10 +27,6 @@
     </function>
     <function group='numeric' name='RADIANS' return-type='real'>
       <formula>(%1 * PI() / 180.0000)</formula>
-      <argument type='real' />
-    </function>
-    <function group='numeric' name='SIGN' return-type='int'>
-      <formula>(CASE WHEN %1 &lt; 0 THEN -1 WHEN %1 &gt; 0 THEN 1 ELSE IF(%1 IS NOT NULL,0, NULL) END)</formula>
       <argument type='real' />
     </function>
     <function group='numeric' name='LOG' return-type='real'>
