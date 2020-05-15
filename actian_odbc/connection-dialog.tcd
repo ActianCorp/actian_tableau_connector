@@ -2,6 +2,7 @@
   <connection-config>
     <authentication-mode value='Basic' />
     <authentication-options>
+      <option name="None" default="false" value="auth-none" />
       <option name="UsernameAndPassword" default="true" />
     </authentication-options>
     <db-name-prompt value="Database: " />
