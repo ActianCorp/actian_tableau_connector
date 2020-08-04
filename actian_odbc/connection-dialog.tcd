@@ -10,7 +10,7 @@
 	<has-schemas value="true" />
     <port-prompt value="Port: " default="27832" />  <!-- 27832===VW FIXME port appears to be numeric ONLY mask in Tableau, defaulting to "VW" does work but then can not update to anything different -->
 
-    <vendor1-prompt value="Additional connection options:"/>
+    <vendor1-prompt value="Options:"/>
 
   </connection-config>
 </connection-dialog>
