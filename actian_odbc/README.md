@@ -37,3 +37,7 @@ Launch Tableau:
  * Click "More..."
  * Select "Actian ODBC by Actian"
  * Fill in "Server" and other fields, using information from your DBA
+     * "Options" field takes ODBC Connection String Keywords, see https://docs.actian.com/avalanche/index.html#page/Connectivity/Connection_String_Keywords.htm
+       Example below:
+       
+           SELECTLOOPS=Y;NUMERIC_ OVERFLOW=IGNORE
