@@ -17,7 +17,8 @@ available from https://www.tableau.com/support/releases/desktop/2019.4.2 is inst
 
 Download taco from files https://github.com/ActianCorp/actian_tableau_connector/releases/latest and copy into:
 
-  * For Microsoft Windows `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
+  * For Microsoft Windows `My Tableau Repository` located in `My Documents`.
+    E.g. `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
 
 See:
 
