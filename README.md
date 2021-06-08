@@ -15,10 +15,10 @@ Ensure using minimum version of Tableau Desktop 2019.4.2, 20194.20.0119.2058
 available from https://www.tableau.com/support/releases/desktop/2019.4.2 is installed.
 
 
-Download taco from files https://github.com/ActianCorp/actian_tableau_connector/releases/latest and copy into:
+Download taco from files https://github.com/ActianCorp/actian_tableau_connector/releases/latest and copy into  `My Tableau Repository`(see https://kb.tableau.com/articles/howto/changing-the-my-tableau-repository-location):
 
-  * For Microsoft Windows `My Tableau Repository` located in `My Documents`.
-    E.g. `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
+  * For Microsoft Windows `My Tableau Repository` typically located in `My Documents`.
+    For example, `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
 
 See:
 
