@@ -22,8 +22,9 @@
 	</connection-resolver>
 	<driver-resolver>
     <driver-match >
-      <driver-name type='regex'>Ingres*</driver-name>
-      <!-- TODO FIXME Actian with new client -->
+      <driver-name type='regex'>Actian*</driver-name>
+      <!-- <driver-name type='regex'>Ingres*</driver-name> -->
+      <!-- <driver-name type='regex'>Actian*|Ingres*</driver-name> -->
     </driver-match>
   </driver-resolver>
 </tdr>
