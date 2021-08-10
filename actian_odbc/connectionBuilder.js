@@ -27,10 +27,10 @@
 
     // support any ODBC connection attribute
     // specify as OPTION=VALUE;OPTION2=VALUE2
-    var tmp_input = attr[connectionHelper.attributeVendor1].trim()
+    var tmp_input = attr[connectionHelper.attributeVendor1]
     if (tmp_input)
     {
-        // trim() maybe overkill, better safe than sorry
+        tmp_input = tmp_input.trim()  // trim() maybe overkill, better safe than sorry
         var tmp_list = tmp_input.split(';');
         for (var key in tmp_list)
         {
