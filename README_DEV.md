@@ -67,7 +67,7 @@ Where `C:\Program Files\Tableau\Tableau 2019.2`, etc. is the location where Tabl
 
 #### Tableau Server
 
-See https://tableau.github.io/connector-plugin-sdk/docs/share
+See https://tableau.github.io/connector-plugin-sdk/docs/run-taco
 
 
 
