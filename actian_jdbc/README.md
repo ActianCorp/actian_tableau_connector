@@ -33,6 +33,7 @@ or obtained from a client installation from:
 Download taco from files https://github.com/ActianCorp/actian_tableau_connector/releases/ and copy into:
 
   * For Microsoft Windows `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
+  * For Apple Mac `/Users/your_user/Documents/My Tableau Repository/Connectors`
 
 
 ### Launch Tableau
