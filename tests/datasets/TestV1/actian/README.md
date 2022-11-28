@@ -5,6 +5,8 @@ An alternative WIN1252 encoded data set is available, to use this edit `load_sta
 
 SDK test suite expects mixedcase object names, although Tableau Desktop does not.
 
+Clone the repository or check out the `tests` folder and then change to the `<parent dir>\tests\datasets\TestV1\actian` directory.
+
     cd CHECK_OUT\tests\datasets\TestV1\actian  # Windows
     cd CHECK_OUT/tests/datasets/TestV1/actian  # Linux/Unix
 
