@@ -43,10 +43,17 @@ Error text:
     Package signature verification failed during connection creation.
 
 This is likely due to due to Tableau bug https://github.com/tableau/connector-plugin-sdk/issues/401
-ideal solution is to install latest patch (or a later version). Workaround is to launch Tableau with unsigned flag:
+ideal solution is to install latest patch (or a later version). Workaround is to launch Tableau with the allow unsigned property/flag `DisableVerifyConnectorPluginSignature` set to true.
+
+Windows
 
     "C:\Program Files\Tableau\Tableau 2019.4\bin\tableau.exe" -DDisableVerifyConnectorPluginSignature=true
 
+Apple Mac OS X
+
+    /Applications/Tableau\ Desktop\ 2022.4.app/Contents/MacOS/Tableau -DDisableVerifyConnectorPluginSignature=true
+
+NOTE path is version specific
 
 ## Development
 
