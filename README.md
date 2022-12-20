@@ -19,6 +19,9 @@ Download taco from files https://github.com/ActianCorp/actian_tableau_connector/
 
   * For Microsoft Windows `My Tableau Repository` typically located in `My Documents`.
     For example, `"%USERPROFILE%\Documents\My Tableau Repository\Connectors"`
+  * For Apple MacOS X `My Tableau Repository` typically located in `Documents` of user.
+    For example, `/Users/your_user/Documents/My Tableau Repository/Connectors` where
+    `your_user` is your username
 
 See:
 
