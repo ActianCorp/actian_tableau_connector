@@ -1,20 +1,31 @@
 # Actian Tableau Connector Development Notes
 
+Table of contents
+-----------------
+
+  * [Overview](#overview)
+  * [Install required drivers](#install-drivers)
+  * [Obtain Connector/install](#obtain-and-install-connector)
+  * [Launch Tableau with new flags](#launch-tableau-with-new-flags)
+  * [Notes](#notes)
+
+### Overview
 
 This is a Connector for Tableau created with the [connector-plugin-sdk](https://github.com/tableau/connector-plugin-sdk).
+
+Starting point for building a connector: [Tableau Connector SDK](https://tableau.github.io/connector-plugin-sdk/docs/)  
+
+#### Important note on building the connection dialog
+
+- For Tableau 2020.3 and later, follow [Connection Dialog v2](https://tableau.github.io/connector-plugin-sdk/docs/mcd)  
+- For Tableau versions prior to 2020.3, follow [Connection Dialog v1](https://tableau.github.io/connector-plugin-sdk/docs/ui.html)  
+
+
+### Actian JDBC and ODBC Connectors - version 1.0.1 and prior
 
 Recommended version of Tableau Desktop is 2019.4.2 (20194.20.0119.2058).
 
 When running from source code (i.e. rather than from a built taco) 2019.2.2, 2019.2.3, as well as 2019.2 are known to also work.
-
-Table of contents
------------------
-
-  * [Usage](#usage)
-  * [Install required drivers](#install-drivers)
-  * [Obtain Connector/install](#obtain-connector-install)
-  * [Launch Tableau with new flags](#launch-tableau-with-new-flags)
-  * [Notes](#notes)
 
 ### Install Drivers
 
@@ -24,7 +35,7 @@ See:
   * [readme for JDBC](actian_jdbc/README.md)
 
 
-### Obtain Connector/install
+### Obtain and Install Connector
 
 Obtain Connectors source code, for example:
 
