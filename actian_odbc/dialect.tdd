@@ -626,7 +626,7 @@
 		<formula part='dayofyear'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDDD&apos;)</formula>
 		<formula part='day'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDD&apos;)</formula>
 		<formula part='weekday'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDay&apos;)</formula>
-		<formula part='week'> CAST(CAST(WEEK(%2,0) AS INTEGER) AS CHAR(3)) </formula>
+		<formula part='week'> CAST(CAST(WEEK(%2,0) AS INTEGER) AS VARCHAR(3)) </formula>
 		<formula part='hour'>TO_CHAR(CAST(%2 AS TIMESTAMP(7)), &apos;FMHH24&apos;)</formula>
 		<formula part='minute'>TO_CHAR(CAST(%2 AS TIMESTAMP(7)), &apos;FMMI&apos;)</formula>
 		<formula part='second'>TO_CHAR(CAST(%2 AS TIMESTAMP(7)), &apos;FMSS&apos;)</formula>
@@ -641,7 +641,7 @@
 		<formula part='dayofyear'>TO_CHAR(CAST(%2 AS TIMESTAMP(5)), &apos;FMDDD&apos;)</formula>
 		<formula part='day'>TO_CHAR(CAST(%2 AS TIMESTAMP(5)), &apos;FMDD&apos;)</formula>
 		<formula part='weekday'>TO_CHAR(CAST(%2 AS TIMESTAMP(5)), &apos;FMDay&apos;)</formula>
-		<formula part='week'>CAST(CAST(WEEK(%2,0) +1 AS INTEGER) AS CHAR(6))</formula>
+		<formula part='week'>CAST(CAST(WEEK(%2,0) +1 AS INTEGER) AS VARCHAR(6))</formula>
 		<formula part='hour'>TO_CHAR(CAST(%2 AS TIMESTAMP(5)), &apos;FMHH24&apos;)</formula>
 		<formula part='minute'>TO_CHAR(CAST(%2 AS TIMESTAMP(5)), &apos;FMMI&apos;)</formula>
 		<formula part='second'>TO_CHAR(CAST(%2 AS TIMESTAMP(5)), &apos;FMSS&apos;)</formula>
@@ -656,7 +656,7 @@
 		<formula part='dayofyear'>TO_CHAR(CAST(%2 AS TIMESTAMP(3)), &apos;FMDDD&apos;)</formula>
 		<formula part='day'>TO_CHAR(CAST(%2 AS TIMESTAMP(3)), &apos;FMDD&apos;)</formula>
 		<formula part='weekday'>TO_CHAR(CAST(%2 AS TIMESTAMP(3)), &apos;FMDay&apos;)</formula>
-		<formula part='week'>CAST(CAST(WEEK(%2,0) AS INTEGER) AS CHAR(4))</formula>
+		<formula part='week'>CAST(CAST(WEEK(%2,0) AS INTEGER) AS VARCHAR(4))</formula>
 		<formula part='hour'>TO_CHAR(CAST(%2 AS TIMESTAMP(3)), &apos;FMHH24&apos;)</formula>
 		<formula part='minute'>TO_CHAR(CAST(%2 AS TIMESTAMP(3)), &apos;FMMI&apos;)</formula>
 		<formula part='second'>TO_CHAR(CAST(%2 AS TIMESTAMP(3)), &apos;FMSS&apos;)</formula>
@@ -671,7 +671,7 @@
 		<formula part='dayofyear'>TO_CHAR(CAST(%2 AS TIMESTAMP(1)), &apos;FMDDD&apos;)</formula>
 		<formula part='day'>TO_CHAR(CAST(%2 AS TIMESTAMP(1)), &apos;FMDD&apos;)</formula>
 		<formula part='weekday'>TO_CHAR(CAST(%2 AS TIMESTAMP(1)), &apos;FMDay&apos;)</formula>
-		<formula part='week'> CAST(CAST(WEEK(%2,0) AS INTEGER) AS CHAR(5))</formula>
+		<formula part='week'> CAST(CAST(WEEK(%2,0) AS INTEGER) AS VARCHAR(5))</formula>
 		<formula part='hour'>TO_CHAR(CAST(%2 AS TIMESTAMP(1)), &apos;FMHH24&apos;)</formula>
 		<formula part='minute'>TO_CHAR(CAST(%2 AS TIMESTAMP(1)), &apos;FMMI&apos;)</formula>
 		<formula part='second'>TO_CHAR(CAST(%2 AS TIMESTAMP(1)), &apos;FMSS&apos;)</formula>
@@ -687,7 +687,7 @@
 		<formula part='dayofyear'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDDD&apos;)</formula>
 		<formula part='day'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDD&apos;)</formula>
 		<formula part='weekday'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDay&apos;)</formula>
-		<formula part='week'> CAST(Cast(WEEK(%2,0) AS INTEGER) AS CHAR(3)) </formula>
+		<formula part='week'> CAST(Cast(WEEK(%2,0) AS INTEGER) AS VARCHAR(3)) </formula>
 		<formula part='hour'>TO_CHAR(CAST(%2 AS TIMESTAMP(2)), &apos;FMHH24&apos;)</formula>
 		<formula part='minute'>TO_CHAR(CAST(%2 AS TIMESTAMP(2)), &apos;FMMI&apos;)</formula>
 		<formula part='second'>TO_CHAR(CAST(%2 AS TIMESTAMP(2)), &apos;FMSS&apos;)</formula>
