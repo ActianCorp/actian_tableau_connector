@@ -455,6 +455,10 @@
 		<argument type='str' />
 		<argument type='str' />
     </function>
+    <function group='system' name='TIME1899' return-type='datetime'>
+		<formula>TIME(CHAR(DATEPART('hour',%1)) + ':' + CHAR(DATEPART('minute',%1)) + ':' + CHAR(DATEPART('second',%1)))</formula>
+		<argument type='datetime' />
+    </function>
     <function group='date' name='YEAR' return-type='int'>
 		<formula>YEAR(%1)</formula>
 		<argument type='datetime' />
