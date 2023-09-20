@@ -534,7 +534,7 @@
 		<formula part='dayofyear'>TIMESTAMPDIFF(DAY,CAST(%2 AS TIMESTAMP(2)), CAST(%3 AS ANSIDATE))</formula>
         <formula part='day'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIDATE))</formula>
 		<formula part='weekday'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIDATE))</formula>
-		<formula  part='week'>CAST(ROUND(TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIdATE))/7.0,0) AS INTEGER)</formula>
+		<formula  part='week'>CAST(ROUND(TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIDATE))/7.0,0) AS INTEGER)</formula>
         <formula part='hour'>TIMESTAMPDIFF(HOUR,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='minute'>TIMESTAMPDIFF(MINUTE,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='second'>TIMESTAMPDIFF(SECOND,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
@@ -691,7 +691,9 @@
 		<formula part='dayofyear'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDDD&apos;)</formula>
 		<formula part='day'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDD&apos;)</formula>
 		<formula part='weekday'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDay&apos;)</formula>
-		<formula part='week'> CAST(Cast(WEEK(%2,0) AS INTEGER) AS VARCHAR(3)) </formula>
+		<!-- The conditional check %3=1 in the next formula part checks if the test case 3rd parameter is 'monday' ('sunday'=0, 'monday'=1)-->
+		<!-- Possible TODO: Handle other DOW values for the 3rd parameter (e.g. 'wednesday', 'thursday', etc.)-->
+		<formula part='week'>IF(%3=1, CAST(CAST(WEEK_ISO(%2) AS INTEGER) AS VARCHAR(3)), CAST(CAST(WEEK(%2,0) AS INTEGER) AS VARCHAR(3)))</formula>
 		<formula part='hour'>TO_CHAR(CAST(%2 AS TIMESTAMP(2)), &apos;FMHH24&apos;)</formula>
 		<formula part='minute'>TO_CHAR(CAST(%2 AS TIMESTAMP(2)), &apos;FMMI&apos;)</formula>
 		<formula part='second'>TO_CHAR(CAST(%2 AS TIMESTAMP(2)), &apos;FMSS&apos;)</formula>
@@ -758,8 +760,10 @@
 		<formula part='dayofyear'>DOY(%2)</formula>
 		<formula part='day'>DAY(%2)</formula>
 		<formula part='weekday'>DAYOFWEEK(%2)</formula>
-		<formula part='week'>WEEK(%2,0)</formula>
-	    <formula part='hour'>HOUR(%2)</formula>
+		<!-- The conditional check %3=1 in the next formula part checks if the test case 3rd parameter is 'monday' ('sunday'=0, 'monday'=1)-->
+		<!-- Possible TODO: Handle other DOW values for the 3rd parameter (e.g. 'wednesday', 'thursday', etc.)-->
+		<formula part='week'>IF(%3=1, WEEK_ISO(%2), WEEK(%2,0))</formula>
+		<formula part='hour'>HOUR(%2)</formula>
 		<formula part='minute'>MINUTE(%2)</formula>
 		<formula part='second'>SECOND(%2)</formula>
 		<argument type='localstr' />
