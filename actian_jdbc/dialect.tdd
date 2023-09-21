@@ -804,7 +804,9 @@
 		<formula part='hour'>TO_TIMESTAMP(TO_CHAR(%2, &apos;YYYY-MM-DD HH24&apos;), &apos;YYYY-MM-DD HH24&apos;)</formula>
 		<formula part='minute'>TO_TIMESTAMP(TO_CHAR(%2, &apos;YYYY-MM-DD HH24:MI&apos;), &apos;YYYY-MM-DD HH24:MI&apos;)</formula>
 		<formula part='second'>TO_TIMESTAMP(TO_CHAR(%2, &apos;YYYY-MM-DD HH24:MI:SS&apos;), &apos;YYYY-MM-DD HH24:MI:SS&apos;)</formula>
-		<formula part='week'>TRUNC((DATE_TRUNC('YEAR', %2) + interval '1' day * 7 * week(%2,0)),'IW') - 1</formula>
+		<!-- The conditional check %3=1 in the next formula part checks if the test case 3rd parameter is 'monday' ('sunday'=0, 'monday'=1)-->
+		<!-- Possible TODO: Handle other DOW values for the 3rd parameter (e.g. 'wednesday', 'thursday', etc.)-->
+		<formula part='week'>IF(%3=1, DATE_TRUNC('WEEK', %2), TRUNC((DATE_TRUNC('YEAR', %2) + interval '1' day * 7 * week(%2,0)),'IW') - 1)</formula>
 		<argument type='localstr' />
 		<argument type='date' />
 		<argument type='localstr' />
