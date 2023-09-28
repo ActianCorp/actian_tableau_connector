@@ -50,6 +50,16 @@
       <argument type='real' />
       <argument type='int' />
     </function>    
+    <function group='numeric' name='ROUND' return-type='real'>
+      <formula>ROUND(%1,%2)</formula>
+      <argument type='real' />
+      <argument type='real' />
+    </function>
+    <function group='numeric' name='ROUND' return-type='real'>
+      <formula>ROUND(%1,%2)</formula>
+      <argument type='real' />
+      <argument type='int' />
+    </function>
     <function group='cast' name='FLOAT' return-type='real'>
       <formula>TIMESTAMPDIFF(DAY,&apos;1900-01-01&apos;, %1)</formula>
       <argument type='date' />
