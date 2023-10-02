@@ -25,7 +25,10 @@
 
       <customization name="CAP_SELECT_INTO" value="yes"/>
       <customization name="CAP_SELECT_TOP_INTO" value="yes"/>
-      <customization name="CAP_CREATE_TEMP_TABLES" value="yes"/>
+      <!-- Setting CAP_CREATE_TEMP_TABLES="no" prevents generation
+           of SQL statements that SELECT data into temporary tables.
+           This change is necessary to resolve several TDVT failures. -->
+      <customization name="CAP_CREATE_TEMP_TABLES" value="no"/>
       <customization name="CAP_INDEX_TEMP_TABLES" value="yes"/>
       <customization name="CAP_QUERY_BOOLEXPR_TO_INTEXPR" value="yes"/>
       <customization name="CAP_QUERY_GROUP_BY_BOOL" value="yes"/>
