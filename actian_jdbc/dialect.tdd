@@ -114,6 +114,10 @@
 		<formula>NVL2(%1,0 , 4) = 4</formula> 
 		<argument type='date' />
     </function>       
+   <function group='logical' name='ISNULL' return-type='bool'>
+                <formula>(%1)</formula>
+                <argument type='bool' />
+    </function>
     <function group='string' name='ASCII' return-type='int'>
 		<formula>CHAREXTRACT(char(HEX(CHAREXTRACT(%1,1))),1)*16 + DECODE(CHAREXTRACT(char(HEX(CHAREXTRACT(%1,1))),2),'A',10,'B',11,'C',12,'D',13,'E',14,'F',15,CHAREXTRACT(char(HEX(CHAREXTRACT(%1,1))),2))</formula>
 		<argument type='str' />
