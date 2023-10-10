@@ -456,7 +456,7 @@
 		<argument type='str' />
     </function>
     <function group='string' name='CONTAINS' return-type='bool'>
-		<formula>(CASE WHEN %2 IS NULL OR %1 IS NULL THEN NULL WHEN  CHARACTER_LENGTH(%2) &gt;= 1 AND %1 CONTAINING (%2) THEN TRUE ELSE FALSE END)  IS TRUE</formula>
+		<formula>(LOCATE(%1,%2) != SIZE(%1)+1) AND (LOCATE(%1,%2) > 0)</formula>
 		<argument type='str' />
 		<argument type='str' />
     </function>
