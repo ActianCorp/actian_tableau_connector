@@ -550,7 +550,9 @@
 		<formula part='dayofyear'>TIMESTAMPDIFF(DAY,CAST(%2 AS TIMESTAMP(2)), %3)</formula>
         <formula part='day'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)</formula>
 		<formula part='weekday'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)</formula>
-		<formula  part='week'>ROUND(TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)/decimal(7, 7, 6), 0)</formula>
+		<!-- This DATEDIFF 'week' formula finds the difference in weeks between the first days of the calendar
+                     weeks in which each of the two given date parameters occur. It should work for any SOW value. -->
+                <formula part='week'>TIMESTAMPDIFF(WEEK,TIMESTAMPADD(DAY, -(DAYOFWEEK(%2,%4)-1), %2),TIMESTAMPADD(DAY, -(DAYOFWEEK(%3,%4)-1), %3))</formula>
         <formula part='hour'>TIMESTAMPDIFF(HOUR,%2, CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='minute'>TIMESTAMPDIFF(MINUTE,%2, CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='second'>TIMESTAMPDIFF(SECOND,%2, CAST(%3 AS TIMESTAMP))</formula>
