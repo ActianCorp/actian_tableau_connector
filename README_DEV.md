@@ -86,7 +86,7 @@ If running test suite, see [data loading readme](https://github.com/clach04/conn
 
 For running the test suite, Tableau expects the non-default mixed case. This will not be needed for https://github.com/tableau/connector-plugin-sdk/issues/216 (`CAP_ODBC_BIND_DETECT_ALIAS_CASE_FOLDING`)
 
-If your object name case is all lower case (which is the default for Actian Avalanche/Vector/ActianX/Ingres) mixed case option is **not** required.
+If your object name case is all lower case (which is the default for Actian Data Platform / Vector / ActianX / Ingres) mixed case option is **not** required.
 
 I.e. mixed case is required if running Tableau Connector SDK tests suite.
 

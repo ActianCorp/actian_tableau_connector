@@ -1,6 +1,6 @@
 # Actian Tableau Connector
 
-Tableau connector (aka taco) for Actian Avalanche, Vector, and Ingres.
+Tableau connector (aka taco) for Actian Data Platform, Vector, and Ingres.
 
 Install from https://extensiongallery.tableau.com/connectors
 
