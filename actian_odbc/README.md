@@ -18,7 +18,7 @@ Usage
 
 ### Install ODBC driver
 
-Install ODBC Driver from [ESD](https://esd.actian.com/product/Avalanche/Client_Runtime)
+Install ODBC Driver from [ESD](https://esd.actian.com/product/Actian_Data_Platform/Client_Runtime)
 
 NOTE Tableau Desktop is a 64-bit product, it requires a 64-Bit ODBC Driver client installation.
 

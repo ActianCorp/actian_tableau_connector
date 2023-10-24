@@ -21,7 +21,7 @@ Install JDBC jar file, Tableau instructions for this are located at [Tableau Dri
 
 Obtain iijdbc.jar and copy into `C:\Program Files\Tableau\Drivers`
 
-iijdbc.jar can either be downloaded from [ESD](https://esd.actian.com/product/Avalanche/JDBC/java/Actian_Avalanche_JDBC_Drivers)
+iijdbc.jar can either be downloaded from [ESD](https://esd.actian.com/product/Actian_Data_Platform/JDBC/java/Actian_Data_Platform_JDBC_Drivers)
 or obtained from a client installation from:
 
   * `%II_SYSTEM%\ingres\lib\iijdbc.jar` - Windows
