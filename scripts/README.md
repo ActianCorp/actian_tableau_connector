@@ -1,7 +1,7 @@
 ## Setup notes for machine that executes the script (Linux example)
-Create new user.
+Create a new user.  
 Create directory: `$HOME/tableau/scripts`  
-Place script package_sign_tacos.sh into the `$HOME/tableau/scripts` directory  
+Place script package_sign_tacos.sh into the `$HOME/tableau/scripts` directory.  
 Create the Jenkins workspace root directory (e.g. `/var/lib/jenkins`) and give read/write/execute permission to the user.  
 Configure the node in Jenkins.  
 Command line packages required by the script: jdk, git, unzip, smctl  
