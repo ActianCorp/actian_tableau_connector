@@ -6,6 +6,11 @@ Install from https://extensiongallery.tableau.com/connectors
 
 Development versions available from [GitHub](https://github.com/ActianCorp/actian_tableau_connector).
 
+Tabloids builds are handled in:
+
+  * https://github.com/Tabloids/Actian-Connector_JDBC
+  * https://github.com/Tabloids/Actian-Connector_ODBC
+
 Minimum recommend version of Tableau is 2019.4 (for earlier versions see development notes see [README_DEV.md](README_DEV.md)).
 
 
