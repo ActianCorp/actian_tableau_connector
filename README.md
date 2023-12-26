@@ -30,9 +30,8 @@ Download taco from files https://github.com/ActianCorp/actian_tableau_connector/
 
 See:
 
-  * [readme for ODBC](actian_odbc/README.md) - *preferred*
-  * [readme for JDBC](actian_jdbc/README.md)
-
+  * [readme for JDBC](actian_jdbc/README.md) - *preferred*
+  * [readme for ODBC](actian_odbc/README.md)
 
 ## Problems
 
