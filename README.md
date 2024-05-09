@@ -5,6 +5,8 @@ Tableau connector (aka taco) for Actian Data Platform, Vector, and Ingres.
 Install from https://extensiongallery.tableau.com/connectors
 
 Development versions available from [GitHub](https://github.com/ActianCorp/actian_tableau_connector).
+  * [JDBC](https://extensiongallery.tableau.com/products/936) - recommended
+  * [ODBC](https://extensiongallery.tableau.com/products/167)
 
 Tabloids builds are handled in:
 
