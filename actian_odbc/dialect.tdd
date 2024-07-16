@@ -50,6 +50,16 @@
       <argument type='real' />
       <argument type='int' />
     </function>    
+    <function group='numeric' name='ROUND' return-type='real'>
+      <formula>ROUND(%1,%2)</formula>
+      <argument type='real' />
+      <argument type='real' />
+    </function>
+    <function group='numeric' name='ROUND' return-type='real'>
+      <formula>ROUND(%1,%2)</formula>
+      <argument type='real' />
+      <argument type='int' />
+    </function>
     <function group='cast' name='FLOAT' return-type='real'>
       <formula>TIMESTAMPDIFF(DAY,&apos;1900-01-01&apos;, %1)</formula>
       <argument type='date' />
@@ -104,12 +114,10 @@
 		<formula>NVL2(%1,0 , 4) = 4</formula> 
 		<argument type='date' />
     </function>       
-
    <function group='logical' name='ISNULL' return-type='bool'>
                 <formula>(%1)</formula>
                 <argument type='bool' />
     </function>
-
     <function group='string' name='ASCII' return-type='int'>
 		<formula>CHAREXTRACT(char(HEX(CHAREXTRACT(%1,1))),1)*16 + DECODE(CHAREXTRACT(char(HEX(CHAREXTRACT(%1,1))),2),'A',10,'B',11,'C',12,'D',13,'E',14,'F',15,CHAREXTRACT(char(HEX(CHAREXTRACT(%1,1))),2))</formula>
 		<argument type='str' />
@@ -448,9 +456,9 @@
 		<argument type='str' />
     </function>
     <function group='string' name='CONTAINS' return-type='bool'>
-	        <formula>(LOCATE(%1,%2) != SIZE(%1)+1) AND (LOCATE(%1,%2) > 0)</formula>
-		<argument type='str' />
-		<argument type='str' />
+        <formula>(LOCATE(%1,%2) != SIZE(%1)+1) AND (LOCATE(%1,%2) > 0)</formula>
+        <argument type='str' />
+        <argument type='str' />
     </function>
     <function group='string' name='LEN' return-type='int'>
 		<formula>CHARACTER_LENGTH(%1)</formula>
@@ -540,7 +548,7 @@
 		<formula part='dayofyear'>TIMESTAMPDIFF(DAY,CAST(%2 AS TIMESTAMP(2)), CAST(%3 AS ANSIDATE))</formula>
         <formula part='day'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIDATE))</formula>
 		<formula part='weekday'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIDATE))</formula>
-		<formula  part='week'>CAST(ROUND(TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIdATE))/7.0,0) AS INTEGER)</formula>
+		<formula  part='week'>CAST(ROUND(TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIDATE))/7.0,0) AS INTEGER)</formula>
         <formula part='hour'>TIMESTAMPDIFF(HOUR,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='minute'>TIMESTAMPDIFF(MINUTE,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='second'>TIMESTAMPDIFF(SECOND,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
@@ -556,9 +564,9 @@
 		<formula part='dayofyear'>TIMESTAMPDIFF(DAY,CAST(%2 AS TIMESTAMP(2)), %3)</formula>
         <formula part='day'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)</formula>
 		<formula part='weekday'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)</formula>
-		<!-- This DATEDIFF 'week' formula finds the difference in weeks between the first days of the calendar
-                     weeks in which each of the two given date parameters occur. It should work for any SOW value. -->
-                <formula part='week'>TIMESTAMPDIFF(WEEK,TIMESTAMPADD(DAY, -(DAYOFWEEK(%2,%4)-1), %2),TIMESTAMPADD(DAY, -(DAYOFWEEK(%3,%4)-1), %3))</formula>
+        <!-- This DATEDIFF 'week' formula finds the difference in weeks between the first days of the calendar
+            weeks in which each of the two given date parameters occur. It should work for any SOW value. -->
+        <formula part='week'>TIMESTAMPDIFF(WEEK,TIMESTAMPADD(DAY, -(DAYOFWEEK(%2,%4)-1), %2),TIMESTAMPADD(DAY, -(DAYOFWEEK(%3,%4)-1), %3))</formula>
         <formula part='hour'>TIMESTAMPDIFF(HOUR,%2, CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='minute'>TIMESTAMPDIFF(MINUTE,%2, CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='second'>TIMESTAMPDIFF(SECOND,%2, CAST(%3 AS TIMESTAMP))</formula>
@@ -622,7 +630,7 @@
 		<formula part='dayofyear'>TIMESTAMPDIFF(DAY,CAST(%2 AS TIMESTAMP(3)), CAST(%3 AS ANSIDATE))</formula>
         <formula part='day'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIDATE))</formula>
 		<formula part='weekday'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIDATE))</formula>
-		<formula  part='week'>CAST(ROUND(TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), CAST(%3 AS ANSIDATE))/7.0,0) AS INTEGER)</formula>
+		<formula part='week'>CAST( FLOOR(( (FLOOR(EXTRACT(EPOCH FROM CAST(%3 AS TIMESTAMP)) / 86400) - EXTRACT(DOW FROM CAST(%3 AS TIMESTAMP)) ) - (FLOOR(EXTRACT(EPOCH FROM CAST(%2 AS TIMESTAMP)) / 86400)- EXTRACT(DOW FROM CAST(%2 AS TIMESTAMP)) ) ) / 7) AS BIGINT)</formula>
 		<formula part='hour'>TIMESTAMPDIFF(HOUR,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='minute'>TIMESTAMPDIFF(MINUTE,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='second'>TIMESTAMPDIFF(SECOND,CAST(%2 AS TIMESTAMP), CAST(%3 AS TIMESTAMP))</formula>
@@ -699,7 +707,9 @@
 		<formula part='dayofyear'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDDD&apos;)</formula>
 		<formula part='day'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDD&apos;)</formula>
 		<formula part='weekday'>TO_CHAR(CAST(%2 AS ANSIDATE), &apos;FMDay&apos;)</formula>
-		<formula part='week'> CAST(Cast(WEEK(%2,0) AS INTEGER) AS VARCHAR(3)) </formula>
+		<!-- The conditional check %3=1 in the next formula part checks if the test case 3rd parameter is 'monday' ('sunday'=0, 'monday'=1)-->
+		<!-- Possible TODO: Handle other DOW values for the 3rd parameter (e.g. 'wednesday', 'thursday', etc.)-->
+		<formula part='week'>IF(%3=1, CAST(CAST(WEEK_ISO(%2) AS INTEGER) AS VARCHAR(3)), CAST(CAST(WEEK(%2,0) AS INTEGER) AS VARCHAR(3)))</formula>
 		<formula part='hour'>TO_CHAR(CAST(%2 AS TIMESTAMP(2)), &apos;FMHH24&apos;)</formula>
 		<formula part='minute'>TO_CHAR(CAST(%2 AS TIMESTAMP(2)), &apos;FMMI&apos;)</formula>
 		<formula part='second'>TO_CHAR(CAST(%2 AS TIMESTAMP(2)), &apos;FMSS&apos;)</formula>
@@ -766,8 +776,10 @@
 		<formula part='dayofyear'>DOY(%2)</formula>
 		<formula part='day'>DAY(%2)</formula>
 		<formula part='weekday'>DAYOFWEEK(%2)</formula>
-		<formula part='week'>WEEK(%2,0)</formula>
-	    <formula part='hour'>HOUR(%2)</formula>
+		<!-- The conditional check %3=1 in the next formula part checks if the test case 3rd parameter is 'monday' ('sunday'=0, 'monday'=1)-->
+		<!-- Possible TODO: Handle other DOW values for the 3rd parameter (e.g. 'wednesday', 'thursday', etc.)-->
+        <formula part='week'>IF(%3=1, WEEK_ISO(%2), WEEK(%2,0))</formula>
+        <formula part='hour'>HOUR(%2)</formula>
 		<formula part='minute'>MINUTE(%2)</formula>
 		<formula part='second'>SECOND(%2)</formula>
 		<argument type='localstr' />
@@ -808,7 +820,9 @@
 		<formula part='hour'>TO_TIMESTAMP(TO_CHAR(%2, &apos;YYYY-MM-DD HH24&apos;), &apos;YYYY-MM-DD HH24&apos;)</formula>
 		<formula part='minute'>TO_TIMESTAMP(TO_CHAR(%2, &apos;YYYY-MM-DD HH24:MI&apos;), &apos;YYYY-MM-DD HH24:MI&apos;)</formula>
 		<formula part='second'>TO_TIMESTAMP(TO_CHAR(%2, &apos;YYYY-MM-DD HH24:MI:SS&apos;), &apos;YYYY-MM-DD HH24:MI:SS&apos;)</formula>
-		<formula part='week'>TRUNC((DATE_TRUNC('YEAR', %2) + interval '1' day * 7 * week(%2,0)),'IW') - 1</formula>
+		<!-- The conditional check %3=1 in the next formula part checks if the test case 3rd parameter is 'monday' ('sunday'=0, 'monday'=1)-->
+		<!-- Possible TODO: Handle other DOW values for the 3rd parameter (e.g. 'wednesday', 'thursday', etc.)-->
+		<formula part='week'>IF(%3=1, DATE_TRUNC('WEEK', %2), TRUNC((DATE_TRUNC('YEAR', %2) + interval '1' day * 7 * week(%2,0)),'IW') - 1)</formula>
 		<argument type='localstr' />
 		<argument type='date' />
 		<argument type='localstr' />
