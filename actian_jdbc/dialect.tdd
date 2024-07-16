@@ -456,9 +456,9 @@
 		<argument type='str' />
     </function>
     <function group='string' name='CONTAINS' return-type='bool'>
-		<formula>(LOCATE(%1,%2) != SIZE(%1)+1) AND (LOCATE(%1,%2) > 0)</formula>
-		<argument type='str' />
-		<argument type='str' />
+        <formula>(LOCATE(%1,%2) != SIZE(%1)+1) AND (LOCATE(%1,%2) > 0)</formula>
+        <argument type='str' />
+        <argument type='str' />
     </function>
     <function group='string' name='LEN' return-type='int'>
 		<formula>CHARACTER_LENGTH(%1)</formula>
@@ -564,10 +564,10 @@
 		<formula part='dayofyear'>TIMESTAMPDIFF(DAY,CAST(%2 AS TIMESTAMP(2)), %3)</formula>
         <formula part='day'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)</formula>
 		<formula part='weekday'>TIMESTAMPDIFF(DAY,CAST(%2 AS ANSIDATE), %3)</formula>
-		<!-- This DATEDIFF 'week' formula finds the difference in weeks between the first days of the calendar
-		     weeks in which each of the two given date parameters occur. It should work for any SOW value. -->
-		<formula part='week'>TIMESTAMPDIFF(WEEK,TIMESTAMPADD(DAY, -(DAYOFWEEK(%2,%4)-1), %2),TIMESTAMPADD(DAY, -(DAYOFWEEK(%3,%4)-1), %3))</formula>
-	<formula part='hour'>TIMESTAMPDIFF(HOUR,%2, CAST(%3 AS TIMESTAMP))</formula>
+        <!-- This DATEDIFF 'week' formula finds the difference in weeks between the first days of the calendar
+            weeks in which each of the two given date parameters occur. It should work for any SOW value. -->
+        <formula part='week'>TIMESTAMPDIFF(WEEK,TIMESTAMPADD(DAY, -(DAYOFWEEK(%2,%4)-1), %2),TIMESTAMPADD(DAY, -(DAYOFWEEK(%3,%4)-1), %3))</formula>
+        <formula part='hour'>TIMESTAMPDIFF(HOUR,%2, CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='minute'>TIMESTAMPDIFF(MINUTE,%2, CAST(%3 AS TIMESTAMP))</formula>
 		<formula part='second'>TIMESTAMPDIFF(SECOND,%2, CAST(%3 AS TIMESTAMP))</formula>
 		<argument type='localstr' />
@@ -778,8 +778,8 @@
 		<formula part='weekday'>DAYOFWEEK(%2)</formula>
 		<!-- The conditional check %3=1 in the next formula part checks if the test case 3rd parameter is 'monday' ('sunday'=0, 'monday'=1)-->
 		<!-- Possible TODO: Handle other DOW values for the 3rd parameter (e.g. 'wednesday', 'thursday', etc.)-->
-		<formula part='week'>IF(%3=1, WEEK_ISO(%2), WEEK(%2,0))</formula>
-		<formula part='hour'>HOUR(%2)</formula>
+        <formula part='week'>IF(%3=1, WEEK_ISO(%2), WEEK(%2,0))</formula>
+        <formula part='hour'>HOUR(%2)</formula>
 		<formula part='minute'>MINUTE(%2)</formula>
 		<formula part='second'>SECOND(%2)</formula>
 		<argument type='localstr' />
