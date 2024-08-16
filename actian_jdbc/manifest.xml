@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
-<connector-plugin class='actian_jdbc' superclass='jdbc' plugin-version='1.0.8' name='Actian Data Platform JDBC' version='18.1'>
+<connector-plugin class='actian_jdbc' superclass='jdbc' plugin-version='1.0.9-dev1' name='Actian Data Platform JDBC' version='18.1'>
   <!--
       Including company_name results in "By Actian" being added to the end of the connector name.
       Not including company_name but including <vendor-information> with url,

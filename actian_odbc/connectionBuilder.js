@@ -24,6 +24,10 @@
         params["DATABASE"] = params["DATABASE"].slice(0, slash_index);  // strip class, leaving only database name
     }
 
+    if (attr["driver"] !== "")
+    {
+        params["DRIVER"] = attr["driver"];
+    }
 
     // support any ODBC connection attribute
     // specify as OPTION=VALUE;OPTION2=VALUE2
