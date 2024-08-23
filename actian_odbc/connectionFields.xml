@@ -9,7 +9,20 @@
   </field>
   <field name="port" label="Port" value-type="string" category="endpoint" default-value="27839" />
   <field name="authentication" label="Authentication" category="authentication" value-type="string" editable="false" default-value="auth-user-pass" />
-  <field name="driver" label="Driver" value-type="string" category="advanced" optional="true" />
   <field name="username" label="Username" value-type="string" category="authentication" />
-  <field name="password" label="Password" value-type="string" category="authentication" secure="true" />
+  <field name="password" label="Password" value-type="string" category="authentication" secure="true" optional="true" />
+  <field name="auth_type" label="Authentication Type" value-type="selection" category="advanced" default-value="native">
+    <selection-group>
+      <option value="native" label="Native" />
+      <option value="browser" label="Federated Identity Management - Browser" />
+      <option value="cli" label="Federated Identity Management - CLI" />
+    </selection-group>
+  </field>
+  <field name="auth_server" label="Authentication Server" category="advanced" value-type="string">
+    <conditions>
+      <condition field="auth_type" value="browser" />
+      <condition field="auth_type" value="cli" />
+    </conditions>
+  </field>
+  <field name="driver" label="Driver" value-type="string" category="advanced" optional="true" />
 </connection-fields>

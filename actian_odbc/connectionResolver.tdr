@@ -11,6 +11,8 @@
           <attr>server</attr>
           <attr>port</attr>
           <attr>driver</attr>
+          <attr>auth_type</attr>
+          <attr>auth_server</attr>
           <attr>dbname</attr>
           <attr>username</attr>
           <attr>password</attr>
