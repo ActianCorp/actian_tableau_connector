@@ -17,4 +17,10 @@
       <true-value value="require" />
     </boolean-options>
   </field>
+  <field name="use_select_loops" label="Use select loops for queries (default is to use cursors)" value-type="boolean" category="advanced" default-value="">
+    <boolean-options>
+      <false-value value="" />
+      <true-value value="require" />
+    </boolean-options>
+  </field>
 </connection-fields>

@@ -1,3 +1,7 @@
+//##############################
+// Changed connectionBuilder.js
+//##############################
+
 (function dsbuilder(attr)
 {
     var urlBuilder = null;
@@ -9,6 +13,11 @@
     else
     {
         urlBuilder = "jdbc:ingres://" + attr[connectionHelper.attributeServer] + ":" + attr[connectionHelper.attributePort] + "/" + attr[connectionHelper.attributeDatabase] + ";";
+    }
+
+    if (attr["use_select_loops"] == "require")
+    {
+        urlBuilder += "LOOP=on;";
     }
 
     return [urlBuilder];
