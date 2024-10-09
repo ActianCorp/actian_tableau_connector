@@ -1,7 +1,3 @@
-//##############################
-// Changed connectionBuilder.js
-//##############################
-
 (function dsbuilder(attr)
 {
     var urlBuilder = null;
