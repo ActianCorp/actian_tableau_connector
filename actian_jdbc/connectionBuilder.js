@@ -17,7 +17,7 @@
 
     if (attr["use_select_loops"] == "require")
     {
-        urlBuilder += "LOOP=on;";
+        urlBuilder += "SELECT_LOOP=ON;";
     }
 
     return [urlBuilder];
