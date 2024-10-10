@@ -11,7 +11,7 @@
         urlBuilder = "jdbc:ingres://" + attr[connectionHelper.attributeServer] + ":" + attr[connectionHelper.attributePort] + "/" + attr[connectionHelper.attributeDatabase] + ";";
     }
 
-    if (attr["use_select_loops"] == "require")
+    if (attr["v-use-select-loops"] == "require")
     {
         urlBuilder += "SELECT_LOOP=ON;";
     }

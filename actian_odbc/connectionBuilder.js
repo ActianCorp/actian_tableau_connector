@@ -27,12 +27,12 @@
         params["DATABASE"] = params["DATABASE"].slice(0, slash_index);  // strip class, leaving only database name
     }
 
-    if (attr["driver"] !== "")
+    if (attr["v-driver"] !== "")
     {
-        params["DRIVER"] = attr["driver"];
+        params["DRIVER"] = attr["v-driver"];
     }
 
-    if (attr["use_cursors"] == "require")
+    if (attr["v-use-cursors"] == "require")
     {
         params["SELECTLOOPS"] = 'N';
     }
