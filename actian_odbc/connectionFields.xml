@@ -7,9 +7,15 @@
 	       for use in the JDBC connection string to connect to the local instance. -->
     <validation-rule reg-exp="^(([a-zA-Z]|[a-zA-Z][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z]|[A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])$|(^\([lL][oO][cC][aA][lL]\)$)"/>
   </field>
-  <field name="port" label="Port" value-type="string" category="endpoint" default-value="27839" />
+  <field name="port" label="Port" value-type="string" category="endpoint" default-value="27832" />
   <field name="authentication" label="Authentication" category="authentication" value-type="string" editable="false" default-value="auth-user-pass" />
-  <field name="driver" label="Driver" value-type="string" category="advanced" optional="true" />
   <field name="username" label="Username" value-type="string" category="authentication" />
-  <field name="password" label="Password" value-type="string" category="authentication" secure="true" />
+  <field name="password" label="Password" value-type="string" category="authentication" secure="true" optional="true" />
+  <field name="use_cursors" label="Use cursors for queries (default is to use select loops)" value-type="boolean" category="advanced" default-value="">
+    <boolean-options>
+      <false-value value="" />
+      <true-value value="require" />
+    </boolean-options>
+  </field>
+  <field name="driver" label="Driver" value-type="string" category="advanced" optional="true" />
 </connection-fields>
