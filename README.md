@@ -30,6 +30,8 @@ Download taco from files https://github.com/ActianCorp/actian_tableau_connector/
     For example, `/Users/your_user/Documents/My Tableau Repository/Connectors` where
     `your_user` is your username
 
+NOTE problems have been seen when using tools like OneDrive, GDrive, etc. to host the taco files.
+
 See:
 
   * [readme for JDBC](actian_jdbc/README.md) - *preferred*
